@@ -3,9 +3,9 @@ version 2.1
 orbs:
  node: circleci/node@4.7.0
 jobs:
-build:
- excutor:
-  name: mode/default
+  build:
+   excutor:
+    name: node/default
   tag: '10.4'
   steps:
    - checkout

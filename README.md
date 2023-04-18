@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: cimg/ruby:2.6.8
         auth:
-          username: ydockerhub-user
+          username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
     steps:
       - checkout 

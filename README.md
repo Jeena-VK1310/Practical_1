@@ -1,15 +1,16 @@
-version 2.1
-
-orbs:
- node: circleci/node@4.7.0
+version: 2
 jobs:
-  build:
-   excutor:
-    name: node/default
-  tag: '10.4'
-  steps:
-   - checkout
-   - node/with -cache:
-      steps:
-        - run: npm install
-     -run: npm run test   
+  one:
+    docker:
+      - image: cimg/ruby:2.6.8
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout 
+      - run: echo "A first hello"
+      - run: sleep 25
+  two:
+     docker:
+       - image: cimg/ruby:3.0.2
+         auth:

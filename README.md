@@ -2,7 +2,7 @@ version: 2
 jobs:
   one:
     docker:
-      - image: cimgruby:2.6.8
+      - image: cimg/ruby:2.6.8
         auth:
           username: ydockerhub-user
           password: $DOCKERHUB_PASSWORD

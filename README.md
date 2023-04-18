@@ -9,7 +9,7 @@ build:
   tag: '10.4'
   steps:
    - checkout
-   - node/with-cache:
+   - node/with -cache:
       steps:
         - run: npm install
      -run: npm run test   
